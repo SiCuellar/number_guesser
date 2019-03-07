@@ -17,11 +17,24 @@
     <script>
     function correct_guess() {
       var x = document.getElementById("guess").value;
+      document.write("Your last guess was ");
       document.write(x);
+
+      validate_guess(x)
+    }
+
+    function validate_guess(num_guess){
+      correct_guess = random_number()
+
+      if (num_guess = correct_guess) {
+        document.write("Correct! You Won!");
+      } else {
+        document.write(" Incorrect! Try Again!")
+      }
     }
 
     function random_number() {
-      
+      Math.floor(Math.random() * 50)
     }
     </script>
   </body>
